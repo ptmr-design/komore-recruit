@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Component - DL Table(定義リスト表:募集要項・会社概要・福利厚生)
+   ========================================================================== */
+
+.c-dl-table__row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px dashed var(--color-gray-line);
+}
+
+.c-dl-table__row:first-child {
+  border-top: 1px dashed var(--color-gray-line);
+}
+
+.c-dl-table__row dt {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+}
+
+.c-dl-table__row dd {
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+/* 実線区切り(会社概要用) */
+.c-dl-table--solid .c-dl-table__row {
+  border-bottom-style: solid;
+}
+
+.c-dl-table--solid .c-dl-table__row:first-child {
+  border-top-style: solid;
+}
+
+.c-dl-table--solid .c-dl-table__row dt,
+.c-dl-table--solid .c-dl-table__row dd {
+  font-size: var(--fs-sm); /* 16px */
+}
+
+/* dd内の箇条書き */
+.c-dl-table__row dd li {
+  position: relative;
+  padding-left: 1em;
+}
+
+.c-dl-table__row dd li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .c-dl-table__row {
+    flex-direction: row;
+    gap: 1rem;
+    padding-block: 2rem;
+  }
+
+  .c-dl-table__row dt {
+    flex-shrink: 0;
+    width: 10rem; /* 160px */
+    padding-top: 0.25rem;
+  }
+
+  .c-dl-table__row dd {
+    flex: 1;
+  }
+}

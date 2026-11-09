@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Layout - Footer
+   ========================================================================== */
+
+.l-footer {
+  padding: 0 var(--padding-inline) var(--padding-inline);
+  background-color: var(--color-base);
+}
+
+.l-footer__inner {
+  padding: 4rem var(--padding-inline) 2.5rem;
+}
+
+.l-footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 59.75rem; /* 956px */
+  margin-inline: auto;
+}
+
+.l-footer__logo {
+  width: 12.5rem; /* 200px */
+}
+
+.l-footer__logo a {
+  display: block;
+  transition: opacity var(--transition-base);
+}
+
+.l-footer__logo a:hover {
+  opacity: 0.7;
+}
+
+.l-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.375rem; /* 16px 22px */
+}
+
+.l-footer__list a {
+  font-weight: var(--fw-bold);
+  transition: color var(--transition-base);
+}
+
+.l-footer__list a:hover {
+  color: var(--color-accent);
+}
+
+.l-footer__bottom {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
+  max-width: 59.75rem; /* ロゴ・ナビと同じ956px */
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+
+.l-footer__copyright {
+  font-family: var(--font-en);
+  font-size: var(--fs-2xs);
+  color: var(--color-gray-text);
+}
+
+.l-footer__sns {
+  display: flex;
+  align-self: flex-end;
+  gap: 1rem; /* 16px */
+}
+
+.l-footer__sns a {
+  display: block;
+  width: 1.5rem; /* 24px */
+  transition: opacity var(--transition-base);
+}
+
+.l-footer__sns a:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .l-footer {
+    padding: 0 4rem 4rem; /* 64px */
+  }
+
+  .l-footer__content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .l-footer__nav {
+    flex: 1;
+    margin-left: 5rem;
+  }
+
+  .l-footer__bottom {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 3.75rem; /* 60px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .l-footer__inner {
+    padding: 3.75rem 0; /* カードの重なり用だった上余白を解消 */
+  }
+
+  .l-footer__logo {
+    width: 15.625rem; /* 250px */
+  }
+}

@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Component - Pagination(ブログ一覧)
+   ========================================================================== */
+
+.c-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem; /* 20px */
+}
+
+.c-pagination a,
+.c-pagination span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.125rem; /* 34px */
+  height: 2.125rem;
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  font-family: var(--font-en-sub);
+  font-size: var(--fs-xs);
+  line-height: 1;
+  transition: background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.c-pagination a {
+  background-color: var(--color-white);
+}
+
+.c-pagination a:hover {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+
+/* 現在ページ */
+.c-pagination .is-current {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}

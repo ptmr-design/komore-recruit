@@ -1,0 +1,281 @@
+/* ==========================================================================
+   Project - 社員について(staff一覧・詳細)
+   ========================================================================== */
+
+/* ----- 一覧 ----- */
+
+.p-staff {
+  padding-block: 3.75rem 5rem;
+}
+
+.p-staff__list {
+  display: grid;
+  justify-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .p-staff {
+    padding-block: 8.125rem 10rem; /* 130px 160px */
+  }
+
+  .p-staff__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2.6875rem; /* 48px 43px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-staff__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----- 詳細:ヒーロー ----- */
+
+.p-staff-hero {
+  background-color: var(--color-base);
+}
+
+.p-staff-hero__inner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
+  padding-block: 2.5rem;
+}
+
+.p-staff-hero__msg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.p-staff-hero__msg span {
+  display: inline-block;
+  padding: 0.1875rem 0.625rem;
+  background-color: var(--color-olive);
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+}
+
+.p-staff-hero__msg .p-staff-hero__msg-main {
+  font-size: var(--fs-lg);
+}
+
+.p-staff-hero__role {
+  margin-top: 1.25rem;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: var(--color-accent);
+}
+
+.p-staff-hero__name {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.p-staff-hero__name em {
+  font-size: var(--fs-xl); /* 24px */
+  font-weight: var(--fw-bold);
+}
+
+.p-staff-hero__profile {
+  margin-top: 1rem;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+.p-staff-hero__img {
+  flex-shrink: 0;
+  max-width: 17.875rem; /* 286px */
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .p-staff-hero__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding-block: 2.75rem; /* 写真162-118=44px */
+  }
+
+  .p-staff-hero__body {
+    max-width: 39.375rem; /* 630px */
+    padding-left: 1.5rem;
+  }
+
+  .p-staff-hero__msg .p-staff-hero__msg-main {
+    font-size: var(--fs-3xl); /* 36px */
+  }
+
+  .p-staff-hero__msg .p-staff-hero__msg-sub {
+    font-size: var(--fs-xl);
+  }
+
+  .p-staff-hero__img {
+    margin-inline: 0;
+  }
+}
+
+/* ----- 詳細:記事本文 ----- */
+
+.p-staff-article {
+  padding-block: 3.75rem 5rem;
+  overflow-x: clip; /* 見出し左の罫線を画面外へ伸ばすため */
+}
+
+.p-staff-article__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.p-staff-article__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.p-staff-article__section + .p-staff-article__section {
+  margin-top: 3.5rem;
+}
+
+/* 左に罫線が伸びる見出し */
+.p-staff-article__title {
+  position: relative;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+}
+
+.p-staff-article__title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 1rem);
+  width: 100vw;
+  height: 1px;
+  background-color: var(--color-text);
+}
+
+.p-staff-article__section p,
+.p-staff-article__section ul {
+  margin-top: 1.25rem;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+.p-staff-article__section h3 {
+  margin-top: 1.5rem;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-relaxed);
+}
+
+.p-staff-article__section li {
+  position: relative;
+  padding-left: 1em;
+}
+
+.p-staff-article__section li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+
+/* ----- 詳細:目次(PCのみ・追従) ----- */
+
+.p-staff-article__toc {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .p-staff-article {
+    padding-block: 6.3125rem 5rem; /* 101px */
+  }
+
+  .p-staff-article__inner {
+    flex-direction: row;
+    gap: 3.5rem; /* 56px */
+  }
+
+  .p-staff-article__body {
+    max-width: 44.375rem; /* 710px */
+  }
+
+  .p-staff-article__section + .p-staff-article__section {
+    margin-top: 4.5rem;
+  }
+
+  .p-staff-article__title {
+    font-size: var(--fs-xl); /* 24px */
+  }
+
+  .p-staff-article__toc {
+    display: block;
+    width: 13.125rem; /* 210px */
+    flex-shrink: 0;
+  }
+
+  .p-staff-article__toc-inner {
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+  }
+
+  .p-staff-article__toc-title {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+  }
+
+  .p-staff-article__toc li {
+    margin-top: 1rem;
+  }
+
+  .p-staff-article__toc a {
+    font-size: var(--fs-xs);
+    line-height: 1.5;
+    color: var(--color-gray-text);
+    transition: color var(--transition-base);
+  }
+
+  .p-staff-article__toc a:hover,
+  .p-staff-article__toc a.is-active {
+    color: var(--color-text);
+    font-weight: var(--fw-bold);
+  }
+}
+
+/* ----- 詳細:その他のメンバー ----- */
+
+.p-staff-others {
+  padding-block: 3.75rem 5rem;
+}
+
+.p-staff-others__list {
+  display: grid;
+  justify-items: center;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .p-staff-others {
+    padding-block: 5rem 8.75rem;
+  }
+
+  .p-staff-others__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.6875rem;
+    margin-top: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-staff-others__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

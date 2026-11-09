@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Foundation - Base
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ページ内アンカー着地時に固定ヘッダー分の余白を確保 */
+[id] {
+  scroll-margin-top: calc(var(--header-height-sp) + 1rem);
+}
+
+@media (min-width: 1024px) {
+  [id] {
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+  }
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  letter-spacing: 0.05em;
+}

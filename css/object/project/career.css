@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Project - 研修制度とキャリアパス(career)
+   ========================================================================== */
+
+.p-career {
+  padding-block: 3.75rem 5rem;
+}
+
+.p-career__lead {
+  margin-top: 2rem;
+  line-height: var(--lh-base);
+}
+
+.p-career__img {
+  margin-top: 2.5rem;
+}
+
+.p-career__zoom-trigger {
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: zoom-in;
+}
+
+.p-career__zoom-trigger:focus-visible,
+.p-career-zoom__close:focus-visible,
+.p-career-zoom__viewport:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.p-career-zoom {
+  width: min(64rem, calc(100% - 2rem));
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+.p-career-zoom::backdrop {
+  background-color: var(--color-text);
+  opacity: 0.65;
+}
+
+.p-career-zoom__close {
+  display: block;
+  margin: 0 0 1rem auto;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-text);
+}
+
+.p-career-zoom__viewport {
+  max-height: calc(100dvh - 9rem);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.p-career-zoom__viewport img {
+  width: 61.25rem; /* 通常のPC表示と同じ980px。スマホでは内部をスクロール */
+  max-width: none;
+  height: auto;
+}
+
+.p-career__list {
+  margin-top: 3rem;
+}
+
+.p-career__item + .p-career__item {
+  margin-top: 2.5rem;
+}
+
+/* オリーブ帯の研修名 */
+.p-career__label {
+  padding: 0.5rem 1.25rem;
+  background-color: var(--color-olive);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-base);
+}
+
+.p-career__text {
+  margin-top: 1.25rem;
+  padding-inline: 1.25rem;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+@media (min-width: 768px) {
+  .p-career {
+    padding-block: 6.5rem 8.75rem;
+  }
+
+  .p-career__lead {
+    margin-top: 3rem;
+  }
+
+  .p-career__img {
+    margin-top: 3rem;
+  }
+
+  .p-career__list {
+    margin-top: 4.5rem;
+  }
+
+  .p-career__item + .p-career__item {
+    margin-top: 3.5rem;
+  }
+
+  .p-career__label {
+    font-size: var(--fs-md); /* 18px */
+    padding: 0.5625rem 1.25rem;
+  }
+
+  .p-career__text {
+    margin-top: 1.75rem;
+    font-size: var(--fs-sm);
+  }
+}

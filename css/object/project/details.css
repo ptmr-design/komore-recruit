@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Project - 募集要項(details)・よくある質問(faq)共通レイアウト
+   ========================================================================== */
+
+.p-details {
+  padding-block: 3.75rem 5rem;
+}
+
+.p-details__lead {
+  margin-top: 2rem;
+  line-height: var(--lh-base);
+}
+
+/* アンカーボタン列 */
+.p-details__anchors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.p-details__section {
+  margin-top: 4rem;
+}
+
+.p-details__section .c-dl-table,
+.p-details__section .c-accordion-list {
+  margin-top: 2rem;
+}
+
+/* FAQは見出しなし先頭余白を詰める */
+.p-details--faq .p-details__anchors {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .p-details {
+    padding-block: 6.5rem 8.75rem;
+  }
+
+  .p-details__anchors {
+    gap: 1rem 2.75rem; /* 44px */
+    justify-content: flex-start;
+  }
+
+  .p-details--faq .p-details__anchors {
+    justify-content: center;
+  }
+
+  .p-details__section {
+    margin-top: 5.5rem;
+  }
+
+  .p-details__section .c-dl-table {
+    margin-top: 3rem;
+  }
+
+  .p-details__section .c-accordion-list {
+    margin-top: 2.5rem;
+  }
+}

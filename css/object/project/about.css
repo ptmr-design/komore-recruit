@@ -1,0 +1,234 @@
+/* ==========================================================================
+   Project - TETOTEについて(about-us)
+   ========================================================================== */
+
+.p-about {
+  padding-block: 3.75rem 5rem;
+}
+
+.p-about__section + .p-about__section {
+  margin-top: 5rem;
+}
+
+/* ----- 私達が大切にしていること ----- */
+
+.p-about-values__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.p-about-values__item {
+  padding: 1.5rem;
+  background-color: var(--color-base);
+  border-radius: var(--radius-md);
+}
+
+.p-about-values__head {
+  display: flex;
+  align-items: center;
+  gap: 1.3125rem; /* 21px */
+}
+
+.p-about-values__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3rem; /* 48px */
+  height: 3rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  font-size: var(--fs-md); /* 18px */
+}
+
+.p-about-values__title {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+.p-about-values__text {
+  margin-top: 1rem;
+  line-height: var(--lh-base);
+}
+
+/* ----- 代表メッセージ ----- */
+
+.p-about-message__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.p-about-message__img {
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.p-about-message__img img {
+  width: 100%;
+  height: auto;
+}
+
+.p-about-message__catch {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-base);
+}
+
+.p-about-message__text p {
+  margin-top: 1.5rem;
+  line-height: var(--lh-relaxed);
+}
+
+.p-about-message__sign {
+  width: 11.5625rem; /* 185px */
+  margin-top: 1.5rem;
+}
+
+/* ----- 事業紹介 ----- */
+
+.p-about-business__lead {
+  margin-top: 2.5rem;
+  line-height: var(--lh-base);
+}
+
+.p-about-business__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-block: 2.5rem;
+}
+
+.p-about-business__item + .p-about-business__item {
+  border-top: 1px solid var(--color-gray-line);
+}
+
+.p-about-business__img {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.p-about-business__img img {
+  width: 100%;
+  aspect-ratio: 7 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-lg); /* 20px */
+}
+
+@media (max-width: 767px) {
+  .p-about-message__phrase {
+    display: inline-block;
+    white-space: nowrap;
+  }
+}
+
+.p-about-business__title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+}
+
+.p-about-business__catch {
+  margin-top: 1.5rem;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-base);
+}
+
+.p-about-business__text {
+  margin-top: 1.5rem;
+  line-height: var(--lh-base);
+}
+
+/* ----- 会社概要 ----- */
+
+.p-about-company .c-dl-table {
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .p-about {
+    padding-block: 4.125rem 8.4375rem; /* 66px 135px */
+  }
+
+  .p-about__section + .p-about__section {
+    margin-top: 5.5rem; /* 88px */
+  }
+
+  .p-about-values__list {
+    gap: 2.1875rem; /* 35px */
+    margin-top: 4.375rem; /* 70px */
+  }
+
+  .p-about-values__item {
+    padding: 1.875rem 5rem; /* 30px 80px */
+  }
+
+  .p-about-values__title {
+    font-size: var(--fs-lg); /* 20px */
+  }
+
+  .p-about-values__text {
+    padding-left: 4.3125rem; /* 番号円+gap分 */
+  }
+
+  .p-about-message__body {
+    flex-direction: row;
+    gap: 2.9375rem; /* 47px */
+    margin-top: 4.375rem;
+  }
+
+  .p-about-message__img {
+    width: 47%; /* 484/1024 */
+  }
+
+  .p-about-message__catch {
+    font-size: var(--fs-2xl); /* 32px */
+  }
+
+  .p-about-business__item {
+    flex-direction: row;
+    gap: 2.625rem; /* 42px */
+    padding-block: 3.875rem; /* 62px */
+  }
+
+  .p-about-business__img {
+    width: 45%; /* 462/1024 */
+  }
+
+  .p-about-business__title {
+    font-size: var(--fs-2xl); /* 32px */
+  }
+
+  .p-about-business__catch {
+    margin-top: 3rem;
+    font-size: var(--fs-xl); /* 24px */
+  }
+
+  .p-about-business__text {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .p-about-message__body,
+  .p-about-business__item {
+    flex-direction: column;
+  }
+
+  .p-about-message__img {
+    width: min(100%, 30.25rem);
+    margin-inline: auto;
+  }
+
+  .p-about-business__img {
+    width: min(100%, 28.875rem);
+    margin-inline: auto;
+  }
+}

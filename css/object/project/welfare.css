@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Project - 福利厚生(benefits)
+   ========================================================================== */
+
+.p-welfare {
+  padding-block: 3.75rem 5rem;
+}
+
+.p-welfare__section + .p-welfare__section {
+  margin-top: 4rem;
+}
+
+.p-welfare .c-dl-table {
+  margin-top: 2rem;
+}
+
+/* ----- 制度利用者の声 ----- */
+
+.p-welfare-voices__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.p-welfare-voices__year {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: var(--color-accent);
+}
+
+.p-welfare-voices__name {
+  margin-top: 0.5rem;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+}
+
+.p-welfare-voices__text {
+  margin-top: 1rem;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+.p-welfare-voices__img {
+  margin-top: 2.5rem;
+}
+
+.p-welfare-voices__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .p-welfare {
+    padding-block: 6.5rem 8.75rem; /* 104px 140px */
+  }
+
+  .p-welfare__section + .p-welfare__section {
+    margin-top: 6.25rem; /* 100px */
+  }
+
+  .p-welfare .c-dl-table {
+    margin-top: 3rem;
+  }
+
+  .p-welfare-voices__list {
+    flex-direction: row;
+    gap: 4.5rem; /* 72px */
+    margin-top: 4rem;
+  }
+
+  .p-welfare-voices__item {
+    flex: 1;
+  }
+
+  .p-welfare-voices__text {
+    font-size: var(--fs-sm);
+  }
+
+  .p-welfare-voices__img {
+    margin-top: 3.75rem; /* 60px */
+  }
+}

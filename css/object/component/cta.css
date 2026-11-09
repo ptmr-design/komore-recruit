@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Component - CTA(全ページ共通・フッター直前)
+   ========================================================================== */
+
+.c-cta {
+  display: grid;
+  place-items: center;
+  padding: 5rem var(--padding-inline);
+  background-image: url("../../../assets/img/common/cta-bg.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.c-cta__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 59.75rem; /* 956px */
+  margin-inline: auto;
+  padding: 3.125rem 1.25rem; /* 50px 20px */
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+}
+
+.c-cta__text {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-relaxed);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .c-cta {
+    padding-block: 11rem; /* 従来の写真高さを保ち、上下に176pxずつ確保 */
+  }
+
+  .c-cta__card {
+    gap: 2.5rem;
+    padding: 3.125rem 2.5rem;
+  }
+
+  .c-cta__text {
+    font-size: var(--fs-sm);
+  }
+}

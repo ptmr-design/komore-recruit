@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Utility
+   ========================================================================== */
+
+/* 語句の途中で折り返さない */
+.u-keep-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* PC(1024px以上)でのみ表示 */
+.u-pc-only {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .u-pc-only {
+    display: revert;
+  }
+
+  /* SP・タブレットでのみ表示 */
+  .u-sp-only {
+    display: none;
+  }
+}
+
+/* FVの初回表示演出。その他のコンテンツには適用しない。 */
+.p-fv .u-fadein.is-fadein-ready {
+  opacity: 0;
+  transform: translateY(var(--fade-distance, 6px));
+}
+
+.p-fv .u-fadein.is-visible {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--fade-duration, 650ms) var(--fade-easing, ease-out) var(--fade-delay, 0ms),
+    transform var(--fade-duration, 650ms) var(--fade-easing, ease-out) var(--fade-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p-fv .u-fadein.is-fadein-ready {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 視覚的に非表示(スクリーンリーダーには読ませる) */
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

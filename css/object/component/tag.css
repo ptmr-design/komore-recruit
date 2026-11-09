@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Component - Tag(ブログカテゴリタグ)
+   ========================================================================== */
+
+.c-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem; /* 4px */
+  font-size: var(--fs-2xs);
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.c-tag img {
+  width: 0.875rem; /* 14px */
+  height: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .c-tag {
+    font-size: var(--fs-xs); /* 14px */
+  }
+}

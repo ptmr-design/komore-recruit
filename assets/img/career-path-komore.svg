@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1468" viewBox="0 0 1960 1468" role="img" aria-labelledby="title desc">
+  <title id="title">KOMOREでの成長ステップ</title>
+  <desc id="desc">住まいづくりに関わる5職種共通の一例。基礎を学ぶ：先輩と仕事を進めながら、住まいや素材の知識、仕事の流れを学ぶ。担当を持つ：担当する仕事の準備・提案・確認を進め、周囲と相談しながら判断する。案件をまとめる：関係者と情報を共有し、進み具合や課題を整理して、案件全体を支える。強みを活かす：専門性を深め、提案の質や仕事の進め方を磨く。知見の共有や後輩支援にも取り組む。</desc>
+  <rect width="1960" height="1468" fill="#EFE8DD"/>
+  <g font-family="'Noto Sans JP', 'Yu Gothic', Meiryo, sans-serif" fill="#342B25">
+    <text x="100" y="140" font-size="76" font-weight="700">KOMOREでの</text>
+    <text x="100" y="232" font-size="76" font-weight="700">成長ステップ</text>
+    <text x="100" y="304" font-size="34">住まいづくりに関わる5職種共通の一例</text>
+    <g id="step-01">
+      <path d="M100 800L500 750V1370H100Z" fill="#FFFFFF"/>
+      <path d="M76 720L241 690V835H76Z" fill="#342B25"/>
+      <text x="158.5" y="788" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="72" font-weight="700">01</text>
+      <g transform="translate(300 895)" fill="none" stroke="#342B25" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="-28" y="-35" width="56" height="70" rx="3"/><path d="M-15-18H15M-15-3H15M-15 12H4"/></g>
+      <text x="300" y="1010" text-anchor="middle" fill="#342B25" font-size="40" font-weight="700">基礎を学ぶ</text>
+      <text x="300" y="1100" text-anchor="middle" font-size="32" font-weight="500">
+        <tspan x="300">先輩と仕事を</tspan>
+        <tspan x="300" dy="48">進めながら、住まいや</tspan>
+        <tspan x="300" dy="48">素材の知識、</tspan>
+        <tspan x="300" dy="48">仕事の流れを学ぶ。</tspan>
+      </text>
+      <rect x="200" y="1330" width="200" height="60" fill="#342B25"/>
+    </g>
+    <g id="step-02">
+      <path d="M545 670L945 620V1370H545Z" fill="#FFFFFF"/>
+      <path d="M521 590L686 560V705H521Z" fill="#6A4D3A"/>
+      <text x="603.5" y="658" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="72" font-weight="700">02</text>
+      <g transform="translate(745 765)" fill="none" stroke="#6A4D3A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M-34 25V-6L0-34 34-6v31H-34ZM-10 25V2H10v23"/></g>
+      <text x="745" y="880" text-anchor="middle" fill="#6A4D3A" font-size="40" font-weight="700">担当を持つ</text>
+      <text x="745" y="970" text-anchor="middle" font-size="32" font-weight="500">
+        <tspan x="745">担当する仕事の準備・</tspan>
+        <tspan x="745" dy="48">提案・確認を進め、</tspan>
+        <tspan x="745" dy="48">周囲と相談しながら</tspan>
+        <tspan x="745" dy="48">判断する。</tspan>
+      </text>
+      <rect x="645" y="1330" width="200" height="60" fill="#6A4D3A"/>
+    </g>
+    <g id="step-03">
+      <path d="M990 540L1390 490V1370H990Z" fill="#FFFFFF"/>
+      <path d="M966 460L1131 430V575H966Z" fill="#8E5631"/>
+      <text x="1048.5" y="528" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="72" font-weight="700">03</text>
+      <g transform="translate(1190 635)" fill="none" stroke="#8E5631" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="-28" y="-35" width="56" height="70" rx="3"/><path d="m-15 2 10 10 20-23"/></g>
+      <text x="1190" y="750" text-anchor="middle" fill="#8E5631" font-size="40" font-weight="700">案件をまとめる</text>
+      <text x="1190" y="840" text-anchor="middle" font-size="32" font-weight="500">
+        <tspan x="1190">関係者と情報を共有し、</tspan>
+        <tspan x="1190" dy="48">進み具合や課題を</tspan>
+        <tspan x="1190" dy="48">整理して、</tspan>
+        <tspan x="1190" dy="48">案件全体を支える。</tspan>
+      </text>
+      <rect x="1090" y="1330" width="200" height="60" fill="#8E5631"/>
+    </g>
+    <g id="step-04">
+      <path d="M1435 410L1835 360V1370H1435Z" fill="#FFFFFF"/>
+      <path d="M1411 330L1576 300V445H1411Z" fill="#A96C45"/>
+      <text x="1493.5" y="398" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="72" font-weight="700">04</text>
+      <g transform="translate(1635 505)" fill="none" stroke="#A96C45" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M0 34V-4M0 9C-24 9-34-5-34-25C-14-25 0-13 0 9ZM0-4C0-23 16-35 34-35C34-16 20-4 0-4Z"/></g>
+      <text x="1635" y="620" text-anchor="middle" fill="#A96C45" font-size="40" font-weight="700">強みを活かす</text>
+      <text x="1635" y="710" text-anchor="middle" font-size="32" font-weight="500">
+        <tspan x="1635">専門性を深め、</tspan>
+        <tspan x="1635" dy="48">提案の質や仕事の</tspan>
+        <tspan x="1635" dy="48">進め方を磨く。</tspan>
+        <tspan x="1635" dy="48">知見の共有や</tspan>
+        <tspan x="1635" dy="48">後輩支援にも取り組む。</tspan>
+      </text>
+      <rect x="1535" y="1330" width="200" height="60" fill="#A96C45"/>
+    </g>
+  </g>
+</svg>

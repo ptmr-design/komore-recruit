@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Component - Accordion(よくある質問)
+   ========================================================================== */
+
+.c-accordion {
+  border-bottom: 1px solid var(--color-gray-line);
+}
+
+.c-accordion.is-animating {
+  overflow: hidden;
+}
+
+.c-accordion__q {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.5rem 3rem 1.5rem 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  transition: opacity var(--transition-base);
+}
+
+.c-accordion__q::-webkit-details-marker {
+  display: none;
+}
+
+.c-accordion__q:hover {
+  opacity: 0.7;
+}
+
+.c-accordion__q:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px; /* 伸縮中のoverflowでもフォーカス枠を隠さない */
+}
+
+.c-accordion__q-mark {
+  flex-shrink: 0;
+  font-family: var(--font-en);
+  font-size: var(--fs-md);
+  color: var(--color-text);
+}
+
+.c-accordion__q-text {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-base);
+}
+
+/* +/- アイコン */
+.c-accordion__q::before,
+.c-accordion__q::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 0.875rem; /* 14px */
+  height: 2px;
+  background-color: var(--color-accent-brand);
+  transform: translateY(-50%);
+  transition: transform var(--transition-base);
+}
+
+.c-accordion__q::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.c-accordion[open]:not(.is-closing) .c-accordion__q::after {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-accordion__q,
+  .c-accordion__q::before,
+  .c-accordion__q::after {
+    transition: none;
+  }
+}
+
+.c-accordion__a {
+  padding: 0 3rem 1.5rem 2.5rem;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+@media (min-width: 768px) {
+  .c-accordion__q-text {
+    font-size: var(--fs-sm);
+  }
+
+  .c-accordion__a {
+    font-size: var(--fs-sm);
+  }
+}

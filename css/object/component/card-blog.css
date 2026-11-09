@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Component - Blog Card(採用ブログカード)
+   ========================================================================== */
+
+.c-card-blog {
+  background-color: var(--color-base);
+  border-radius: var(--radius-md);
+}
+
+/* アイボリー背景セクション用(TOP採用ブログ) */
+.c-card-blog--white {
+  background-color: var(--color-white);
+}
+
+.c-card-blog > a {
+  display: flex;
+  min-height: 11.25rem; /* 180px */
+  transition: opacity var(--transition-base);
+}
+
+.c-card-blog > a:hover {
+  opacity: 0.7;
+}
+
+/* カード全体の透過中も小さい日付文字のコントラストを確保 */
+.c-card-blog > a:hover .c-card-blog__date,
+.c-card-blog > a:hover .c-tag {
+  color: var(--color-text);
+}
+
+.c-card-blog__img {
+  flex-shrink: 0;
+  width: 9.75rem; /* 156px */
+}
+
+.c-card-blog__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+.c-card-blog__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 1.25rem 1.4375rem; /* 20px 23px */
+}
+
+.c-card-blog__title {
+  margin-top: 0.875rem;
+  font-size: var(--fs-md); /* 18px */
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-base);
+  text-decoration: none;
+}
+
+.c-card-blog__date {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: var(--fs-2xs);
+  color: var(--color-gray-text);
+  line-height: 1;
+}
+
+@media (max-width: 1023px) {
+  .c-card-blog__img {
+    width: 6rem;
+  }
+
+  .c-card-blog__body {
+    padding-inline: 0.75rem;
+  }
+}

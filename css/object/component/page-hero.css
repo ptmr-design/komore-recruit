@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Component - Page Hero(下層ページ共通ヒーロー)
+   ========================================================================== */
+
+.c-page-hero {
+  position: relative;
+}
+
+.c-page-hero__img {
+  height: 13.75rem; /* SP */
+}
+
+.c-page-hero__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-page-hero__body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* 白帯 + 英字タイトル */
+.c-page-hero__en {
+  padding: 0.1875rem 0.625rem; /* 3px 10px */
+  background-color: var(--color-white);
+  font-family: var(--font-en);
+  font-size: var(--fs-3xl);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* 白帯 + 日本語タイトル */
+.c-page-hero__ja {
+  margin-top: 0.75rem;
+  padding: 0.1875rem 0.625rem;
+  background-color: var(--color-white);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+}
+
+/* 白帯 + 説明文(オリーブ文字) */
+.c-page-hero__desc {
+  margin-top: 0.75rem;
+  padding: 0.4375rem 0.625rem; /* 7px 10px */
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .c-page-hero__img {
+    height: 21.1875rem; /* 339px */
+  }
+
+  .c-page-hero__body {
+    padding-left: 1.5rem; /* コンテンツ左端から24px(Figma: 232-208) */
+  }
+
+  .c-page-hero__en {
+    font-size: var(--fs-6xl); /* 64px */
+  }
+
+  .c-page-hero__ja {
+    margin-top: 1.125rem; /* 18px */
+    font-size: var(--fs-xl); /* 24px */
+  }
+
+  .c-page-hero__desc {
+    margin-top: 1.125rem;
+    font-size: var(--fs-sm); /* 16px */
+  }
+}

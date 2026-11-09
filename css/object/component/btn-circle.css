@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Component - Circle Button(丸矢印ボタン:スライダー・リンク)
+   ========================================================================== */
+
+.c-btn-circle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.625rem; /* 58px */
+  height: 3.625rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  transition: background-color var(--transition-base);
+}
+
+/* 矢印(横線 + 先端) */
+.c-btn-circle::before {
+  content: "";
+  width: 1rem; /* 16px */
+  height: 1px;
+  background-color: var(--color-text);
+  transition: background-color var(--transition-base);
+}
+
+.c-btn-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(50% - 0.5rem);
+  width: 0.375rem;
+  height: 0.375rem;
+  border-top: 1px solid var(--color-text);
+  border-right: 1px solid var(--color-text);
+  transform: translateY(-70%) rotate(45deg);
+  transition: border-color var(--transition-base);
+}
+
+.c-btn-circle:hover {
+  background-color: var(--color-text);
+}
+
+.c-btn-circle:hover::before {
+  background-color: var(--color-white);
+}
+
+.c-btn-circle:hover::after {
+  border-color: var(--color-white);
+}
+
+/* 左向き(スライダー戻る) */
+.c-btn-circle--prev {
+  transform: scaleX(-1);
+}
+
+/* 黒地(ホバーで白) */
+.c-btn-circle--dark {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.c-btn-circle--dark::before {
+  background-color: var(--color-white);
+}
+
+.c-btn-circle--dark::after {
+  border-color: var(--color-white);
+}
+
+.c-btn-circle--dark:hover {
+  background-color: var(--color-white);
+}
+
+.c-btn-circle--dark:hover::before {
+  background-color: var(--color-text);
+}
+
+.c-btn-circle--dark:hover::after {
+  border-color: var(--color-text);
+}
+
+/* 小サイズ(48px) */
+.c-btn-circle--sm {
+  width: 3rem;
+  height: 3rem;
+}

@@ -1,0 +1,10 @@
+/* ==========================================================================
+   Layout - Container
+   ========================================================================== */
+
+/* コンテンツ幅(1024px)のインナー */
+.l-inner {
+  max-width: calc(var(--width-content) + var(--padding-inline) * 2);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+}

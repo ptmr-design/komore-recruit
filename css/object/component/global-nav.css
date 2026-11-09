@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Component - Global Navigation(全画面メニュー)
+   ========================================================================== */
+
+.c-global-nav {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-nav);
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--header-height-sp) + 1.5rem) var(--padding-inline) 2.5rem;
+  background-color: var(--color-base);
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: auto;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.c-global-nav.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* オーバーレイ中央のロゴ(PC時のみ表示) */
+.c-global-nav__logo {
+  display: none;
+}
+
+.c-global-nav__item {
+  border-top: 1px solid var(--color-olive);
+}
+
+.c-global-nav__item a {
+  display: block;
+  padding: 1.25rem 0; /* 20px */
+  transition: color var(--transition-base);
+}
+
+.c-global-nav__item a:hover {
+  color: var(--color-accent-dark);
+}
+
+.c-global-nav__en {
+  display: block;
+  font-family: var(--font-en);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-tight);
+}
+
+.c-global-nav__ja {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+}
+
+.c-global-nav__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem; /* 14px */
+  margin-top: 2.5rem;
+}
+
+.c-global-nav__actions .c-btn {
+  width: 100%;
+  height: 2.875rem; /* 46px */
+}
+
+@media (min-width: 1024px) {
+  .c-global-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3.9375rem; /* 63px */
+    padding: var(--header-height) 1.875rem 2.5rem;
+  }
+
+  .c-global-nav__logo {
+    display: block;
+    width: 15.625rem; /* 250px */
+  }
+
+  /* ロゴとメニューの間の縦罫線 */
+  .c-global-nav__divider {
+    width: 1px;
+    height: 25.4375rem; /* 407px */
+    background-color: var(--color-olive);
+  }
+
+  .c-global-nav__body {
+    width: 32.875rem; /* 526px */
+  }
+
+  .c-global-nav__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.875rem; /* 30px */
+  }
+
+  .c-global-nav__item {
+    height: 6.5625rem; /* 105px */
+  }
+
+  /* 3行目(各列最下)の下にも罫線 */
+  .c-global-nav__item:nth-child(5),
+  .c-global-nav__item:nth-child(6) {
+    border-bottom: 1px solid var(--color-olive);
+  }
+
+  .c-global-nav__item a {
+    padding: 1.4375rem 0 0; /* 23px */
+  }
+
+  .c-global-nav__en {
+    font-size: var(--fs-2xl);
+  }
+
+  .c-global-nav__ja {
+    margin-top: 0.6875rem; /* 11px */
+    font-size: var(--fs-sm);
+  }
+
+  .c-global-nav__actions {
+    flex-direction: row;
+    gap: 1.875rem; /* 30px */
+    margin-top: 3.125rem; /* 50px */
+  }
+
+  .c-global-nav__actions .c-btn {
+    height: 2.625rem; /* 42px */
+  }
+}

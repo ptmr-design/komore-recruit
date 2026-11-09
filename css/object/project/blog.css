@@ -1,0 +1,232 @@
+/* ==========================================================================
+   Project - 採用ブログ(一覧・詳細)
+   ========================================================================== */
+
+/* ----- 一覧 ----- */
+
+.p-blog-list {
+  padding-block: 3.75rem 5rem;
+}
+
+.p-blog-list__grid {
+  display: grid;
+  gap: 1.4375rem; /* 23px */
+}
+
+.p-blog-list .c-pagination {
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .p-blog-list {
+    padding-block: 6.5rem 8.75rem; /* 104px 140px */
+  }
+
+  .p-blog-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.25rem; /* 52px */
+  }
+
+  .p-blog-list .c-pagination {
+    margin-top: 6.25rem; /* 100px */
+  }
+}
+
+/* ----- 詳細 ----- */
+
+.p-blog-detail {
+  padding-block: 2.5rem 5rem;
+  background-color: var(--color-base);
+}
+
+.p-blog-detail__card {
+  padding: 2rem 1.25rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+}
+
+.p-blog-detail__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.p-blog-detail__date {
+  font-size: var(--fs-2xs);
+  line-height: 1;
+}
+
+.p-blog-detail__title {
+  margin-top: 1.25rem;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-base);
+}
+
+.p-blog-detail__img {
+  margin-top: 1.5rem;
+}
+
+.p-blog-detail__body p {
+  margin-top: 1.5rem;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+.p-blog-detail__body h2 {
+  margin-top: 2.5rem;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-base);
+}
+
+.p-blog-detail__body ul {
+  margin-top: 1.5rem;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+}
+
+.p-blog-detail__body li {
+  position: relative;
+  padding-left: 1em;
+}
+
+.p-blog-detail__body li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+
+/* 前後記事ナビ */
+.p-blog-detail__nav {
+  background-color: var(--color-gray-bg);
+}
+
+.p-blog-detail__nav-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-blog-detail__nav-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.5rem 2.5rem;
+  transition: opacity var(--transition-base);
+}
+
+.p-blog-detail__nav-item:hover {
+  opacity: 0.7;
+}
+
+.p-blog-detail__nav-item:hover .p-blog-detail__nav-date {
+  color: var(--color-text);
+}
+
+.p-blog-detail__nav-title {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-base);
+}
+
+.p-blog-detail__nav-date {
+  font-size: var(--fs-2xs);
+  color: var(--color-gray-text);
+}
+
+/* 丸囲み矢印 */
+.p-blog-detail__nav-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.p-blog-detail__nav-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-top: 1.5px solid var(--color-text);
+  border-right: 1.5px solid var(--color-text);
+}
+
+.p-blog-detail__nav-item--prev {
+  padding-left: 3.5rem;
+}
+
+.p-blog-detail__nav-item--prev::before {
+  left: 1rem;
+}
+
+.p-blog-detail__nav-item--prev::after {
+  left: 1.625rem;
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.p-blog-detail__nav-item--next {
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.p-blog-detail__nav-item--next::before {
+  right: 1rem;
+}
+
+.p-blog-detail__nav-item--next::after {
+  right: 1.625rem;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@media (min-width: 768px) {
+  .p-blog-detail {
+    padding-block: 2.5rem 6.25rem;
+  }
+
+  .p-blog-detail__card {
+    padding: 3.4375rem; /* 55px */
+  }
+
+  .p-blog-detail__title {
+    font-size: var(--fs-xl); /* 24px */
+  }
+
+  .p-blog-detail__body p,
+  .p-blog-detail__body ul {
+    font-size: var(--fs-sm);
+  }
+
+  .p-blog-detail__body h2 {
+    font-size: var(--fs-lg); /* 20px */
+  }
+
+  .p-blog-detail__nav-inner {
+    flex-direction: row;
+  }
+
+  /* 中央の区切り線 */
+  .p-blog-detail__nav-item--next {
+    border-left: 1px solid var(--color-gray-line);
+  }
+}
+
+/* 差し替え後も記事写真の従来の表示比率を維持する。 */
+.p-blog-detail__img img {
+  width: 100%;
+  aspect-ratio: 7 / 4;
+  object-fit: cover;
+}
+
+.p-blog-detail__img img[src$="/blog02.webp"],
+.p-blog-detail__img img[src$="/blog06.webp"],
+.p-blog-detail__img img[src$="/blog10.webp"] {
+  aspect-ratio: 1280 / 853;
+}

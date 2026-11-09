@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Component - Button
+   ========================================================================== */
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  transition: background-color var(--transition-base),
+    color var(--transition-base), border-color var(--transition-base);
+}
+
+/* 黒ボタン(募集要項) */
+.c-btn--dark {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+
+.c-btn--dark:hover {
+  background-color: var(--color-accent);
+}
+
+/* ENTRY: 通常文字の可読性を確保する濃いブラウン */
+.c-btn--olive {
+  background-color: var(--color-accent-dark);
+  color: var(--color-white);
+}
+
+.c-btn--olive:hover {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+
+/* 英字表記ボタン */
+.c-btn--en {
+  font-family: var(--font-en);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.1em;
+}
+
+/* ヘッダー・ナビ用の小サイズ */
+.c-btn--sm {
+  width: 7.875rem; /* 126px */
+  height: 2.625rem; /* 42px */
+}
+
+/* 白地・枠線ボタン(VIEW MORE) */
+.c-btn--outline {
+  position: relative;
+  width: 100%;
+  max-width: 22.1875rem; /* 355px */
+  height: 5rem; /* 80px */
+  background-color: var(--color-white);
+  border: 1px solid var(--color-text);
+  font-family: var(--font-en);
+  font-size: var(--fs-lg); /* 20px */
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+.c-btn--outline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2.25rem; /* 36px */
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: translateY(-50%) rotate(45deg);
+  transition: right var(--transition-base);
+}
+
+.c-btn--outline:hover {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+
+.c-btn--outline:hover::after {
+  right: 2rem;
+}
+
+/* CTA用の大サイズ(矢印付き) */
+.c-btn--wide {
+  position: relative;
+  width: 100%;
+  max-width: 34.75rem; /* 556px */
+  height: 4.375rem; /* 70px */
+  font-size: var(--fs-sm);
+  color: var(--color-white);
+}
+
+.c-btn--wide:hover {
+  color: var(--color-white);
+}
+
+.c-btn--wide::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem; /* 32px */
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: translateY(-50%) rotate(45deg);
+  transition: right var(--transition-base);
+}
+
+.c-btn--wide:hover::after {
+  right: 1.75rem;
+}
